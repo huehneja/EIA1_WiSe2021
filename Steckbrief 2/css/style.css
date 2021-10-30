@@ -14,7 +14,6 @@ nav a {
 nav li:hover:not(.active)
 {
  background-color: #C0C0C0;
- color: #0d0c0c                                     ;
 }
 .active {
     background-color: #303030;
@@ -62,7 +61,7 @@ nav li:last-child {
     margin-top: 350px;
     letter-spacing: -10px;
     margin-bottom: -100%;
-    font-size: 175px;
+    font-size: 170px;
 }
 .subtitle {
     display: block;
@@ -90,6 +89,12 @@ nav li:last-child {
     margin-top: 6%;
     margin-right: 25%;
     font-weight: lighter;
+    color: #303030;
+}
+header p:last-child {
+    font-size: 8px;
+    margin-top: 16px;
+    color: #303030;
 }
 .iconbar ul {
     display: inline-flex;
@@ -103,4 +108,38 @@ nav li:last-child {
 }
 .iconbar li:hover {
     filter: saturate(100%);
+}
+main {
+    margin-top: 20%;
+    text-align: center;
+}
+main img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-weight: 700;
+    color: #0d0c0c:
+  }
+input[type=submit] {
+    background-color: #0d0c0c;
+    border: none;
+    color: seashell;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+input[type=submit]:hover {
+      background-color: #C0C0C0;
+  }
+#contact p {
+    font-weight: 700;
+    color: #0d0c0c;
 }
