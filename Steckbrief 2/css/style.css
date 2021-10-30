@@ -84,6 +84,9 @@ nav li:last-child {
     border-color: grey;
     float: left;
 }
+.blazon:hover {
+    border-color:#C0C0C0;
+}
 .subsubtitle {
     display: block;
     font-size: 15px;
