@@ -58,7 +58,7 @@ nav li:last-child {
     display: inline-block;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 350px;
+    margin-top: 370px;
     letter-spacing: -10px;
     margin-bottom: -100%;
     font-size: 170px;
@@ -97,12 +97,14 @@ nav li:last-child {
     font-size: 8px;
     margin-top: 30px;
     color: #303030;
+    margin-top: 10%;
 }
 .iconbar ul {
     display: inline-flex;
     list-style-type: none;
     padding: 0;
     margin-right: 30%;
+    margin-top: 6%;
 }
 .iconbar li {
     margin-right: 50%;
