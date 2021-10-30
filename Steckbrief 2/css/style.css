@@ -62,6 +62,7 @@ nav li:last-child {
     letter-spacing: -10px;
     margin-bottom: -100%;
     font-size: 170px;
+    text-shadow: 2px 2px 4px #000000;
 }
 .subtitle {
     display: block;
@@ -71,6 +72,7 @@ nav li:last-child {
     margin-right: 100px;
     margin-top: 0;
     margin-bottom: 0;
+    text-shadow: 2px 2px 8px #000000;
 }
 .blazon {
     display: block;
@@ -91,9 +93,9 @@ nav li:last-child {
     font-weight: lighter;
     color: #303030;
 }
-header p:last-child {
+.engraving  {
     font-size: 8px;
-    margin-top: 16px;
+    margin-top: 30px;
     color: #303030;
 }
 .iconbar ul {
