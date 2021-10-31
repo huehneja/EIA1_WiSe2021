@@ -117,7 +117,7 @@ nav li:last-child {
     filter: saturate(100%);
 }
 main {
-    margin-top: 20%;
+    margin-top: 30%;
     text-align: center;
 }
 main img {
@@ -133,8 +133,8 @@ input[type=text] {
     border: 2px;
     font-weight: 700;
     color: #0d0c0c;
-    float: left;
     font-size: 14px;
+    float: left;
   }
 input[type=submit] {
     background-color: #0d0c0c;
@@ -150,6 +150,19 @@ input[type=submit]:hover {
       background-color: #C0C0C0;
   }
 #contact p {
-    font-weight: 700;
+    display: block;
+    width: 50%;
+    font-weight: 300;
+    color: #C0C0C0;
+    font-size: 12px;
+    text-align: left;
+    float: left;
+    margin-right: 50%;
+}
+#contact a {
+    text-decoration: underline;
+    color: inherit;
+}
+#contact a:hover {
     color: #0d0c0c;
 }
