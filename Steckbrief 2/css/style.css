@@ -6,7 +6,6 @@ body {
 }
 nav a {
     text-decoration: none;
-    display: block;
     margin: 1px;
     color:seashell;
     padding: 5px 8px;
@@ -56,8 +55,6 @@ nav li:last-child {
 }
 .title {
     display: inline-block;
-    margin-right: auto;
-    margin-left: auto;
     margin-top: 370px;
     letter-spacing: -10px;
     margin-bottom: -100%;
@@ -65,7 +62,6 @@ nav li:last-child {
     text-shadow: 2px 2px 4px #000000;
 }
 .subtitle {
-    display: block;
     font-size: 50px;
     letter-spacing: -3px;
     text-align: right;
@@ -75,7 +71,6 @@ nav li:last-child {
     text-shadow: 2px 2px 8px #000000;
 }
 .blazon {
-    display: block;
     margin-left: 10%;
     margin-top: 0;
     border-radius: 50%;
@@ -88,7 +83,6 @@ nav li:last-child {
     border-color:#C0C0C0;
 }
 .subsubtitle {
-    display: block;
     font-size: 15px;
     letter-spacing: 3px;
     margin-top: 6%;
@@ -98,7 +92,6 @@ nav li:last-child {
 }
 .engraving  {
     font-size: 8px;
-    margin-top: 30px;
     color: #303030;
     margin-top: 10%;
 }
