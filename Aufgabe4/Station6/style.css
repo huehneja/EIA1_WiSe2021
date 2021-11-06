@@ -11,3 +11,25 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+h1 {
+    position: relative;
+    top: 40px;
+    left: 40px;
+    column-span: all;
+}
+.First {
+    position: relative;
+    top: 50px;
+    left: 40px;
+    margin-right: 80px;
+    column-count: 2;
+    column-gap: 20px;
+}
+.Last {
+    position: relative;
+    top: 50px;
+    left: 40px;
+    margin-right: 80px;
+    column-count: 3;
+    column-gap: 10px;
+}
