@@ -8,32 +8,36 @@ body {
 	font-family: arial;
 	font-size: small;
     background: url(Assets/bg.gif); /* Geklaut von https://www.netzwolf.info/rasputin.de/CF/Jugend/ */
-
+    
 }
 a {
 	text-decoration: none;
 	font-family: 'Verdana';
-	padding: 20px 10px;
 	font-weight: bold;
     background: url(Assets/bg.gif);
     border: 10px solid green;
-    filter: opacity(80%)
+    padding: 10px 30px;
+    font-size: 50px;
 }
 a:hover {
-    filter: invert(100%);
+    border: 10px solid red;
 }
-ul {
-    display: block;
-    list-style-type: none;
+li:hover {
+    animation:animation 1.5s ease-in-out infinite both;
 }
 li {
-
-    padding: 30px;
+    margin-bottom: 15%;
+}
+ul {
+    list-style-type: none;
 }
 .cool {
-    display: flex;
-    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
+@keyframes animation{0%{transform:scale(1)}50%{transform:scale(1.35)}100%{transform:scale(1)}}
 </style>
 </head>
 <body>

@@ -46,3 +46,4 @@ body {
     95% {opacity: 100%;}
     100% {bottom: 5%; opacity: 0%;}
 }
+.heartbeat{-webkit-animation:heartbeat 1.5s ease-in-out infinite both;animation:heartbeat 1.5s ease-in-out infinite both}
