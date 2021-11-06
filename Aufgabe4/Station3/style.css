@@ -1,0 +1,86 @@
+body {
+    background: url(assets/bg.png)
+}
+.wrapper {
+    width: 600px;
+    height: 400px;
+    background-image: url(assets/wrapperbg.png);
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+ h1 {
+    position: relative;
+    left: 40px;
+    top: 40px;
+    margin-right: 150px;
+}
+.Stern1 {
+    position: absolute;
+    left: 150px;
+    top: 25px;
+    width: 65px;
+}
+.Stern1 img:last-child {
+    display: none;  
+  }
+.Stern1:hover img:last-child {
+    display: block;  
+  }
+.Stern1:hover img:first-child {
+    display: none;  
+  }
+.Stern1 {
+    position: absolute;
+    left: 420px;
+    top: 200px;
+    width: 65px;
+}
+.Stern2 img:last-child {
+    display: none;  
+  }
+.Stern2:hover img:last-child {
+    display: block;  
+  }
+.Stern2:hover img:first-child {
+    display: none;  
+  }
+.Stern2 {
+    position: absolute;
+    left: 50px;
+    top: 210px;
+    width: 65px;
+}
+.Stern3 img:last-child {
+    display: none;  
+  }
+.Stern3:hover img:last-child {
+    display: block;  
+  }
+.Stern3:hover img:first-child {
+    display: none;  
+  }
+.Stern3 {
+    position: relative;
+    left: 150px;
+    top: 25px;
+    width: 65px;
+}
+.Stern4 img:last-child {
+    display: none;  
+  }
+.Stern4:hover img:last-child {
+    display: block;  
+  }
+.Stern4:hover img:first-child {
+    display: none;  
+  }
+.Stern4 {
+    position: absolute;
+    left: 250px;
+    top: 270px;
+    width: 65px;
+}
