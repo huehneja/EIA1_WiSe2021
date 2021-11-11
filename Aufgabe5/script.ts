@@ -13,7 +13,10 @@ var nrtamerica2018 : number = 6035.6;
 var asia2008 : number = 12954.7;
 var asia2018 : number = 16274.1;
 
-var gesamt : number = africa2018 + sthamerica2018 + europe2018 + nrtamerica2018 + asia2018;
+var australia2008 : number = 1993;
+var australia2018 : number = 2100.5;
+
+var gesamt : number = africa2018 + sthamerica2018 + europe2018 + nrtamerica2018 + asia2018 + australia2018;
 
 console.log('Die Emission von Afrika ist: ' + africa2018 + '\nRelativ zur Gesamtemission der Welt verusacht Afrika damit ' 
 + (africa2018 / gesamt*100).toFixed(0) +'%.\nFür Afrika hat sich 2018 im Vergleich zu 2008 die Emission um ' 
@@ -34,3 +37,7 @@ console.log('Die Emission von Nordamerika ist: ' + nrtamerica2018 + '\nRelativ z
 console.log('Die Emission von Asien ist: ' + asia2018 + '\nRelativ zur Gesamtemission der Welt verusacht Asien damit ' 
 + (asia2018 / gesamt*100).toFixed(0) +'%.\nFür Asien hat sich 2018 im Vergleich zu 2008 die Emission um ' 
 + ((asia2018 / asia2008-1)*100).toFixed(0) + '% geändert.\n2018 im Vergleich zu 2008 sind das ' + (asia2018-asia2008).toFixed(0) + ' kg CO2');
+
+console.log('Die Emission von Australien ist: ' + australia2018 + '\nRelativ zur Gesamtemission der Welt verusacht Australien damit ' 
++ (australia2018 / gesamt*100).toFixed(0) +'%.\nFür Australien hat sich 2018 im Vergleich zu 2008 die Emission um ' 
++ ((australia2018 / australia2008-1)*100).toFixed(0) + '% geändert.\n2018 im Vergleich zu 2008 sind das ' + (australia2018-australia2008).toFixed(0) + ' kg CO2');
