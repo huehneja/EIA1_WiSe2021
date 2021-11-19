@@ -13,17 +13,6 @@ var australia2008 = 1993;
 var australia2018 = 2100.5;
 //Variable für die Gesamtemission//
 var gesamt = africa2018 + sthamerica2018 + europe2018 + nrtamerica2018 + asia2018 + australia2018;
-//Variable für die function continent, um nicht für jeden einzelnen Kontinent individuellen Code zu schreiben//
-var continent2018;
-var continent2008;
-var continent;
-//Variablen für das Ändern der Überschrift//
-var africa = "Carbon Dioxide Emissions of Africa";
-var europe = "Carbon Dioxide Emissions of Europe";
-var asia = "Carbon Dioxide Emissions of Asia";
-var sthamerica = "Carbon Dioxide Emissions of South America";
-var nrtamerica = "Carbon Dioxide Emissions of North America";
-var australia = "Carbon Dioxide Emissions of Australia";
 window.addEventListener("load", function () {
     function continent(continent2008, continent2018, continent) {
         //Rechen- und andere Operationen, die die Werte für den gewählen Kontinent berechnen bzw. ausgeben//
@@ -37,10 +26,10 @@ window.addEventListener("load", function () {
     }
     ;
     //Auswahl des Kontinenten, der in der function continent weiterverarbeitet und ausgegeben wird//
-    document.querySelector(".africa").addEventListener("click", function () { continent(africa2008, africa2018, africa); });
-    document.querySelector(".europe").addEventListener("click", function () { continent(europe2008, europe2018, europe); });
-    document.querySelector(".asia").addEventListener("click", function () { continent(asia2008, asia2018, asia); });
-    document.querySelector(".southamerica").addEventListener("click", function () { continent(sthamerica2008, sthamerica2018, sthamerica); });
-    document.querySelector(".northamerica").addEventListener("click", function () { continent(nrtamerica2008, nrtamerica2018, nrtamerica); });
-    document.querySelector(".australia").addEventListener("click", function () { continent(australia2008, australia2018, australia); });
+    document.querySelector(".africa").addEventListener("click", function () { continent(africa2008, africa2018, "Carbon Dioxide Emissions of Africa"); });
+    document.querySelector(".europe").addEventListener("click", function () { continent(europe2008, europe2018, "Carbon Dioxide Emissions of Europe"); });
+    document.querySelector(".asia").addEventListener("click", function () { continent(asia2008, asia2018, "Carbon Dioxide Emissions of Asia"); });
+    document.querySelector(".southamerica").addEventListener("click", function () { continent(sthamerica2008, sthamerica2018, "Carbon Dioxide Emissions of South America"); });
+    document.querySelector(".northamerica").addEventListener("click", function () { continent(nrtamerica2008, nrtamerica2018, "Carbon Dioxide Emissions of North America"); });
+    document.querySelector(".australia").addEventListener("click", function () { continent(australia2008, australia2018, "Carbon Dioxide Emissions of Australia"); });
 });
