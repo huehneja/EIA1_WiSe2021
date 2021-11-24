@@ -1,0 +1,45 @@
+body {
+    background: #000000;
+}
+.drumpad {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+button {
+    display: block;
+    float: left;
+    width: 150px;
+    height: 150px;
+    margin: 3px;
+    border-radius: 10px;
+    cursor: pointer;
+    border-width: 1px;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: xx-large;
+}
+button:hover {
+    font-size: 0;
+}
+#play {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%)
+}
+#play:hover {
+    opacity: 50%;
+    transition: all 420ms;
+    cursor: pointer;
+}
+.blue {
+    background: linear-gradient(180deg,#3d94f5 0%, #2167d4 100%);
+}
+.pink {
+    background: linear-gradient(180deg,#fd54ab 0%, #f00b82 100%);
+}
+.orange {
+    background: linear-gradient(180deg,#f19d36 0%, #c96a05 100%);
+}
