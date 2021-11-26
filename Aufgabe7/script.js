@@ -6,15 +6,15 @@ function playSample(audioFile) {
 //Funktion für den Beat//
 function playBeat() {
     var Beat = [Sounds[1], Sounds[1], Sounds[1], Sounds[2], Sounds[1], Sounds[1], Sounds[0], Sounds[2]];
-    var Song = [Sounds[9], Sounds[9], Sounds[9], Sounds[9], Sounds[9], Sounds[9], Sounds[9], Sounds[9], Sounds[9], Sounds[9], Sounds[9], Sounds[9], Sounds[9], Sounds[9], Sounds[9], Sounds[9], Sounds[5], Sounds[4], Sounds[3], Sounds[4], Sounds[5], Sounds[5], Sounds[5], Sounds[9], Sounds[4], Sounds[4], Sounds[4], Sounds[9], Sounds[5], Sounds[6], Sounds[6], Sounds[9], Sounds[5], Sounds[4], Sounds[3], Sounds[4], Sounds[5], Sounds[5], Sounds[5], Sounds[9], Sounds[4], Sounds[4], Sounds[5], Sounds[4], Sounds[3], Sounds[7], Sounds[8], Sounds[9], Sounds[9]]; //Wahrscheinlich gibts da auch ne bessere Lösung als , , aber ist ja eh kein Teil der Aufgabe (Führt zu Error Codes in der Konsole)//
+    var Song = [Sounds[5], Sounds[4], Sounds[3], Sounds[4], Sounds[5], Sounds[5], Sounds[5], Sounds[9], Sounds[4], Sounds[4], Sounds[4], Sounds[9], Sounds[5], Sounds[6], Sounds[6], Sounds[9], Sounds[5], Sounds[4], Sounds[3], Sounds[4], Sounds[5], Sounds[5], Sounds[5], Sounds[9], Sounds[4], Sounds[4], Sounds[5], Sounds[4], Sounds[3], Sounds[7], Sounds[8]]; //Vielen Dank für die Hilfe bei den ,,//
     var index1 = 0;
     var index2 = 0;
     setInterval(function () { playSample([Beat[index1]]), index1++; if (index1 == Beat.length) {
         index1 = 0;
     } }, 200);
-    setInterval(function () { playSample([Song[index2]]), index2++; if (index2 == Song.length) {
-        index2 = 0;
-    } }, 400);
+    setTimeout(function () { setInterval(function () { playSample([Song[index2]]), index2++; if (index2 == Song.length) {
+        clearInterval;
+    } }, 400); }, 12800);
 }
 //Array für Soundfiles//
 var Sounds = ["assets/hihat.mp3", "assets/kick.mp3", "assets/snare.mp3", "assets/F.mp3", "assets/G.mp3", "assets/A.mp3", "assets/C.mp3", "assets/laugh-1.mp3", "assets/laugh-2.mp3", "assets/leer.mp3"];
