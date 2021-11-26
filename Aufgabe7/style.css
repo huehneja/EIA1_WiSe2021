@@ -29,8 +29,19 @@ button,h1 {
 }
 h1 {
     text-align: center;
-    color: #0d0c0c;
-    text-shadow: 2px 2px #131313;
+    color: #131313;
+    text-shadow: 2px 2px 2px #0d0c0c;
+}
+a, h2 {
+    text-align: center;
+    color: #303030;
+    text-shadow: 2px 2px 2px #131313;
+    font-size: 20px;
+    transition: all 123ms;
+    text-decoration: none;
+}
+a:hover { 
+    font-size: 21px;
 }
 button:hover {
     transform: scale(0.98);
