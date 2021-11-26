@@ -23,7 +23,7 @@ button {
     color: #ffffff;
     transition: all 123ms;
 }
-p,button,h1 {
+button,h1 {
     font-family: sans-serif;
     font-size: xx-large;
 }
@@ -32,28 +32,17 @@ h1 {
     color: #0d0c0c;
     text-shadow: -2px 2px #131313;
 }
-p {
-    position: absolute;
-    left: 224px;
-    top: 493px;
-    color: #ffffff;;
-    text-shadow: 2px -2px 5px #888888;
-    z-index: 1;
-}
 button:hover {
-    font-size: 0;
     transform: scale(1.05);
 }
-
 #play {
     position: relative;
     left: 174px;
 }
 #play:hover {
-    opacity: 50%;
-    transition: all 420ms;
+    transition: all 123ms;
     cursor: pointer;
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 .blue {
     background: linear-gradient(180deg,#3d94f5 0%, #2167d4 100%);
