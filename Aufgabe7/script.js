@@ -12,9 +12,12 @@ function playBeat() {
     setInterval(function () { playSample([Beat[index1]]), index1++; if (index1 == Beat.length) {
         index1 = 0;
     } }, 200);
-    setTimeout(function () { setInterval(function () { playSample([Song[index2]]), index2++; if (index2 == Song.length) {
-        clearInterval;
-    } }, 400); }, 12800);
+    setTimeout(function () { setInterval(function () { if (index2 >= Song.length) {
+        stop;
+    }
+    else {
+        playSample([Song[index2]]);
+    } ; index2++; }, 400); }, 12800); //Workaround damit Song nur einmal nach dem Timeout abgespielt wird und es durch den Interval nicht zu einem Error kommt//
 }
 //Array für Soundfiles//
 var Sounds = ["assets/hihat.mp3", "assets/kick.mp3", "assets/snare.mp3", "assets/F.mp3", "assets/G.mp3", "assets/A.mp3", "assets/C.mp3", "assets/laugh-1.mp3", "assets/laugh-2.mp3", "assets/leer.mp3"];
