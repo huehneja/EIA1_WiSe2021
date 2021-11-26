@@ -34,6 +34,7 @@ h1 {
 }
 button:hover {
     transform: scale(1.05);
+    font-size: 0;
 }
 #play {
     position: relative;
@@ -43,6 +44,7 @@ button:hover {
     transition: all 123ms;
     cursor: pointer;
     transform: scale(1.05);
+    filter: brightness(200%) saturate(0%) contrast(1000%);
 }
 .blue {
     background: linear-gradient(180deg,#3d94f5 0%, #2167d4 100%);
