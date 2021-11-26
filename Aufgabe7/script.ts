@@ -10,8 +10,8 @@ var Beat : string [] = [Sounds[1], Sounds[1], Sounds [1], Sounds[2], Sounds[1], 
 var Song : string [] = [, , , , , , , , , , , , , , , ,Sounds[5], Sounds[4], Sounds [3], Sounds[4], Sounds[5],  Sounds[5], Sounds[5], , Sounds[4], Sounds[4], Sounds[4], , Sounds[5], Sounds[6], Sounds[6], , Sounds[5], Sounds[4], Sounds [3], Sounds[4], Sounds[5], Sounds[5], Sounds[5], , Sounds[4], Sounds[4], Sounds[5], Sounds[4], Sounds [3],Sounds[7] , Sounds[8] , ,] //Wahrscheinlich gibts da auch ne bessere Lösung als , , aber ist ja eh kein Teil der Aufgabe (Führt zu Error Codes in der Konsole)//
 var index1 : number = 0;
 var index2 : number = 0;
-setInterval(function () { playSample([Beat[index1]]), index1++; if (index1 == Beat.length){index1 = 0}}, 250);
-setInterval(function () { playSample([Song[index2]]), index2++; if (index2 == Song.length){index2 = 0}}, 500)
+setInterval(function () { playSample([Beat[index1]]), index1++; if (index1 == Beat.length){index1 = 0}}, 200);
+setInterval(function () { playSample([Song[index2]]), index2++; if (index2 == Song.length){index2 = 0}}, 400)
 }
 
 //Array für Soundfiles//
