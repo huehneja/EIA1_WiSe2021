@@ -30,11 +30,12 @@ button,h1 {
 h1 {
     text-align: center;
     color: #0d0c0c;
-    text-shadow: -2px 2px #131313;
+    text-shadow: 2px 2px #131313;
 }
 button:hover {
-    transform: scale(1.05);
+    transform: scale(0.98);
     font-size: 0;
+    z-index: 1;
 }
 #play {
     position: relative;
@@ -62,11 +63,11 @@ button:hover {
     text-shadow: 2px -2px 5px #c96a05;
 }
 .blue:hover {
-    box-shadow: 0px 0px 15px #2167d4;
+    box-shadow: 0px 0px 5px #2167d4;
 }    
 .pink:hover {
-    box-shadow: 0px 0px 15px #f00b82;
+    box-shadow: 0px 0px 5px #f00b82;
 }
 .orange:hover {
-    box-shadow: 0px 0px 15px #c96a05;
+    box-shadow: 0px 0px 5px #c96a05;
 }
