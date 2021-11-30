@@ -160,3 +160,6 @@ input[type=submit]:hover {
 #contact a:hover {
     color: #0d0c0c;
 }
+img, video {
+    margin-bottom: 10px;
+}
