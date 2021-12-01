@@ -29,11 +29,12 @@ button,h1 {
     font-size: xx-large;
 }
 h1 {
+    margin-top: 100px;
     text-align: center;
     color: #131313;
     text-shadow: 2px 2px 2px #0d0c0c;
 }
-a, h2 {
+a {
     text-align: center;
     color: #303030;
     text-shadow: 2px 2px 2px #131313;
@@ -68,24 +69,53 @@ i {
 }
 #record:hover {
     color: #f53d3d;
-    text-shadow: 0px 0px 5px #d42121;
-
+    text-shadow: 0px 0px 10px #d42121;
+    transform: scale(1.03);
+}
+#record:active {
+    color: #d42121;
+    text-shadow: 0px 0px 5px #f53d3d;
+    transform: scale(0.95);
 }
 .fa-play-circle:hover {
     color: #3df546;
-    text-shadow: 0px 0px 5px #21d42a;
+    text-shadow: 0px 0px 10px #21d42a;
+    transform: scale(1.03);
+}
+.fa-play-circle:active {
+    color: #21d42a;
+    text-shadow: 0px 0px 5px #3df546;
+    transform: scale(0.95);
 }
 .fa-stop-circle:hover {
     color: #fd54ab;
-    text-shadow: 0px 0px 5px #f00b82;
+    text-shadow: 0px 0px 10px #f00b82;
+    transform: scale(1.03);
+}
+.fa-stop-circle:active {
+    color: #f00b82;
+    text-shadow: 0px 0px 5px #fd54ab;
+    transform: scale(0.95); 
 }
 #delete:hover {
     color: #3d94f5;
-    text-shadow: 0px 0px 5px #2167d4;
+    text-shadow: 0px 0px 10px #2167d4;
+    transform: scale(1.03);
+}
+#delete:active {
+    color: #2167d4;
+    text-shadow: 0px 0px 5px #3d94f5;
+    transform: scale(0.95);
 }
 #random:hover {
     color: #f19d36;
-    text-shadow: 0px 0px 5px #c96a05;
+    text-shadow: 0px 0px 10px #c96a05;
+    transform: scale(1.03);
+}
+#random:active {
+    color: #c96a05;
+    text-shadow: 0px 0px 5px #f19d36;
+    transform: scale(0.95);
 }
 .blue {
     background: linear-gradient(180deg,#3d94f5 0%, #2167d4 100%);

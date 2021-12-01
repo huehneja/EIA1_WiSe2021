@@ -1,21 +1,30 @@
-//Zentrale Funktion zum Abspielen der Audiofiles//
-function playSample (audioFile) {
-    var sound:HTMLAudioElement = new Audio(audioFile);
-    sound.play();
-}
 //Array für Soundfiles & Beat//
 var Sounds : string [] = [ "assets/hihat.mp3", "assets/kick.mp3","assets/snare.mp3","assets/F.mp3","assets/G.mp3","assets/A.mp3","assets/C.mp3","assets/laugh-1.mp3","assets/laugh-2.mp3","assets/leer.mp3"]
 var Beat : string [] = [Sounds[1], Sounds[1], Sounds [1], Sounds[2], Sounds[1], Sounds[1], Sounds[0], Sounds[2]]
+
+//Booleans für Funktionen//
 var beatPlaying : boolean = false;
 var beatRecording : boolean = false;
+
+//Zentrale Funktion zum Abspielen der Audiofiles & eventuelles Recording//
+function playSample (audioFile) {
+    var sound:HTMLAudioElement = new Audio(audioFile);
+    sound.play();
+    if (beatRecording==true) {
+        Beat.push(audioFile)
+    }
+}
 //Funktion für den Playbutton//
 function playBeat (){
+    stopRecording();
     beatPlaying = true;
     document.getElementById("play").setAttribute("class","far fa-stop-circle")
     var index1 : number = 0;
-    var Interval : any = setInterval(playInterval, 200);
+    var Interval : any = setInterval(playInterval, 250);
         function playInterval() {if(!beatPlaying) {clearInterval(Interval)} else  if (index1 >= Beat.length){index1=0; playSample([Beat[index1]])} else {playSample([Beat[index1]])}; index1++;}
-}
+        console.log(Beat);
+    }
+
 //Funktion für Stop (wird mehrfach benutzt um bei anderen Befehlen nicht zu überlappen)//
 function stopBeat() {
     {document.getElementById("play").setAttribute("class","far fa-play-circle"); beatPlaying=false;}
@@ -24,6 +33,7 @@ function stopBeat() {
 //Funktion um einen zufälligen Beat mit 8 Sounds zu erstellen//
 function randomBeat() {
     stopBeat();
+
     Beat = [Sounds[Math.floor(Math.random() * 3)],Sounds[Math.floor(Math.random() * 3)],Sounds[Math.floor(Math.random() * 3)],Sounds[Math.floor(Math.random() * 3)],Sounds[Math.floor(Math.random() * 3)],Sounds[Math.floor(Math.random() * 3)],Sounds[Math.floor(Math.random() * 3)],Sounds[Math.floor(Math.random() * 3)],]
 }
 
@@ -32,11 +42,15 @@ function deleteBeat() {
     stopBeat();
     Beat = [];
 }
+//Funktion um einen Beat zu recorden//
 function recordBeat() {
-    document.getElementById("record").setAttribute("style","color: #f53d3d;")
-    stopBeat();
+    document.getElementById("record").setAttribute("style","color: #d42121;")
     deleteBeat();
     beatRecording = true;
+}
+function stopRecording() {
+    beatRecording = false;
+    document.getElementById("record").setAttribute("style","color: #ffffff;");
 }
 //EventListener für die zentrale Funktion & keydown Events für Tastatursteuerung//
 window.addEventListener("load", function() {
@@ -52,7 +66,7 @@ window.addEventListener("load", function() {
     document.getElementById("play").addEventListener("click", function () {if(!beatPlaying) {playBeat()} else {stopBeat();}})
     document.getElementById("random").addEventListener("click", function(){randomBeat()})
     document.getElementById("delete").addEventListener("click", function(){deleteBeat()})
-    document.getElementById("record").addEventListener("click", function(){if(!beatRecording) {recordBeat()}else {beatRecording=false; document.getElementById("record").setAttribute("style","color: #ffffff;")}})
+    document.getElementById("record").addEventListener("click", function(){if(!beatRecording) {recordBeat()} else { stopRecording();}})
     //Numpad Steuerung//
     document.addEventListener("keydown", function (event) {if (event.keyCode == 103) {playSample (Sounds[0])}})
     document.addEventListener("keydown", function (event) {if (event.keyCode == 104) {playSample (Sounds[1])}}) 

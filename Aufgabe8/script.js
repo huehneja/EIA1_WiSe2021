@@ -1,19 +1,24 @@
-//Zentrale Funktion zum Abspielen der Audiofiles//
-function playSample(audioFile) {
-    var sound = new Audio(audioFile);
-    sound.play();
-}
 //Array für Soundfiles & Beat//
 var Sounds = ["assets/hihat.mp3", "assets/kick.mp3", "assets/snare.mp3", "assets/F.mp3", "assets/G.mp3", "assets/A.mp3", "assets/C.mp3", "assets/laugh-1.mp3", "assets/laugh-2.mp3", "assets/leer.mp3"];
 var Beat = [Sounds[1], Sounds[1], Sounds[1], Sounds[2], Sounds[1], Sounds[1], Sounds[0], Sounds[2]];
+//Booleans für Funktionen//
 var beatPlaying = false;
 var beatRecording = false;
+//Zentrale Funktion zum Abspielen der Audiofiles & eventuelles Recording//
+function playSample(audioFile) {
+    var sound = new Audio(audioFile);
+    sound.play();
+    if (beatRecording == true) {
+        Beat.push(audioFile);
+    }
+}
 //Funktion für den Playbutton//
 function playBeat() {
+    stopRecording();
     beatPlaying = true;
     document.getElementById("play").setAttribute("class", "far fa-stop-circle");
     var index1 = 0;
-    var Interval = setInterval(playInterval, 200);
+    var Interval = setInterval(playInterval, 250);
     function playInterval() { if (!beatPlaying) {
         clearInterval(Interval);
     }
@@ -24,6 +29,7 @@ function playBeat() {
     else {
         playSample([Beat[index1]]);
     } ; index1++; }
+    console.log(Beat);
 }
 //Funktion für Stop (wird mehrfach benutzt um bei anderen Befehlen nicht zu überlappen)//
 function stopBeat() {
@@ -42,11 +48,15 @@ function deleteBeat() {
     stopBeat();
     Beat = [];
 }
+//Funktion um einen Beat zu recorden//
 function recordBeat() {
-    document.getElementById("record").setAttribute("style", "color: #f53d3d;");
-    stopBeat();
+    document.getElementById("record").setAttribute("style", "color: #d42121;");
     deleteBeat();
     beatRecording = true;
+}
+function stopRecording() {
+    beatRecording = false;
+    document.getElementById("record").setAttribute("style", "color: #ffffff;");
 }
 //EventListener für die zentrale Funktion & keydown Events für Tastatursteuerung//
 window.addEventListener("load", function () {
@@ -71,8 +81,7 @@ window.addEventListener("load", function () {
         recordBeat();
     }
     else {
-        beatRecording = false;
-        document.getElementById("record").setAttribute("style", "color: #ffffff;");
+        stopRecording();
     } });
     //Numpad Steuerung//
     document.addEventListener("keydown", function (event) { if (event.keyCode == 103) {
