@@ -41,6 +41,7 @@ function stopBeat() {
 //Funktion um einen zufälligen Beat mit 8 Sounds zu erstellen//
 function randomBeat() {
     stopBeat();
+    stopRecording();
     Beat = [Sounds[Math.floor(Math.random() * 3)], Sounds[Math.floor(Math.random() * 3)], Sounds[Math.floor(Math.random() * 3)], Sounds[Math.floor(Math.random() * 3)], Sounds[Math.floor(Math.random() * 3)], Sounds[Math.floor(Math.random() * 3)], Sounds[Math.floor(Math.random() * 3)], Sounds[Math.floor(Math.random() * 3)],];
 }
 //Funktion um den Beat zu löschen bzw. einen leeren Beat laufen zu lassen// 
