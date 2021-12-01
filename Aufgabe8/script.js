@@ -51,13 +51,28 @@ function deleteBeat() {
 }
 //Funktion um einen Beat zu recorden//
 function recordBeat() {
-    document.getElementById("record").setAttribute("style", "color: #d42121;");
     deleteBeat();
     beatRecording = true;
+    //Blinkende Aufnahme//
+    var Interval = setInterval(playInterval, 500);
+    var Interval2 = setInterval(playInterval2, 1000);
+    function playInterval() { if (beatRecording == false) {
+        clearInterval(Interval);
+    }
+    else {
+        document.getElementById("record").setAttribute("style", "color: #d42121;");
+    } ; }
+    function playInterval2() { if (beatRecording == false) {
+        clearInterval(Interval2);
+    }
+    else {
+        document.getElementById("record").setAttribute("style", "color: #000000;");
+    } }
 }
+//Funktion um das Recorden zu stoppen//
 function stopRecording() {
     beatRecording = false;
-    document.getElementById("record").setAttribute("style", "color: #ffffff;");
+    document.getElementById("record").setAttribute("style", "color: #d42121;");
 }
 //EventListener für die zentrale Funktion & keydown Events für Tastatursteuerung//
 window.addEventListener("load", function () {
@@ -70,12 +85,12 @@ window.addEventListener("load", function () {
     document.getElementById("C").addEventListener("click", function () { playSample(Sounds[6]); });
     document.getElementById("laugh-1").addEventListener("click", function () { playSample(Sounds[7]); });
     document.getElementById("laugh-2").addEventListener("click", function () { playSample(Sounds[8]); });
-    document.getElementById("play").addEventListener("click", function () { if (!beatPlaying) {
+    document.getElementById("play").addEventListener("click", function () { if (!beatPlaying && Beat[1] != undefined) {
         playBeat();
     }
     else {
         stopBeat();
-    } });
+    } }); // Verhindert das bei leerem Beat ein Error ausgegeben wird//
     document.getElementById("random").addEventListener("click", function () { randomBeat(); });
     document.getElementById("delete").addEventListener("click", function () { deleteBeat(); });
     document.getElementById("record").addEventListener("click", function () { if (!beatRecording) {
@@ -113,8 +128,13 @@ window.addEventListener("load", function () {
         playSample(Sounds[8]);
     } });
     document.addEventListener("keydown", function (event) { if (event.keyCode == 96) {
-        playBeat();
-    } });
+        if (!beatPlaying && Beat[1] != undefined) {
+            playBeat();
+        }
+        else {
+            stopBeat();
+        }
+    } }); //Siehe Zeile 70//
     //Standard Ziffer Steuerung//
     document.addEventListener("keydown", function (event) { if (event.keyCode == 55) {
         playSample(Sounds[0]);
@@ -144,6 +164,11 @@ window.addEventListener("load", function () {
         playSample(Sounds[8]);
     } });
     document.addEventListener("keydown", function (event) { if (event.keyCode == 48) {
-        playBeat();
-    } });
+        if (!beatPlaying && Beat[1] != undefined) {
+            playBeat();
+        }
+        else {
+            stopBeat();
+        }
+    } }); //Siehe Zeile 70//
 });

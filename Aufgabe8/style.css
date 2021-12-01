@@ -67,54 +67,69 @@ i {
     margin: 10px;
     cursor: pointer;
 }
+#record {
+    color: #d42121;
+}
 #record:hover {
     color: #f53d3d;
-    text-shadow: 0px 0px 10px #d42121;
+    text-shadow: 0px 0px 1px #d42121;
     transform: scale(1.03);
 }
 #record:active {
     color: #d42121;
-    text-shadow: 0px 0px 5px #f53d3d;
+    text-shadow: 0px 0px 15px #f53d3d;
     transform: scale(0.95);
+}
+.fa-play-circle {
+    color: #21d42a;    
 }
 .fa-play-circle:hover {
     color: #3df546;
-    text-shadow: 0px 0px 10px #21d42a;
+    text-shadow: 0px 0px 5px #21d42a;
     transform: scale(1.03);
 }
 .fa-play-circle:active {
     color: #21d42a;
-    text-shadow: 0px 0px 5px #3df546;
+    text-shadow: 0px 0px 15px #3df546;
     transform: scale(0.95);
+}
+.fa-stop-circle {
+    color: #f00b82;
 }
 .fa-stop-circle:hover {
     color: #fd54ab;
-    text-shadow: 0px 0px 10px #f00b82;
+    text-shadow: 0px 0px 5px #f00b82;
     transform: scale(1.03);
 }
 .fa-stop-circle:active {
     color: #f00b82;
-    text-shadow: 0px 0px 5px #fd54ab;
+    text-shadow: 0px 0px 15px #fd54ab;
     transform: scale(0.95); 
+}
+#delete {
+    color: #2167d4;
 }
 #delete:hover {
     color: #3d94f5;
-    text-shadow: 0px 0px 10px #2167d4;
+    text-shadow: 0px 0px 5px #2167d4;
     transform: scale(1.03);
 }
 #delete:active {
     color: #2167d4;
-    text-shadow: 0px 0px 5px #3d94f5;
+    text-shadow: 0px 0px 15px #3d94f5;
     transform: scale(0.95);
+}
+#random {
+    color: #c96a05;
 }
 #random:hover {
     color: #f19d36;
-    text-shadow: 0px 0px 10px #c96a05;
+    text-shadow: 0px 0px 5px #c96a05;
     transform: scale(1.03);
 }
 #random:active {
     color: #c96a05;
-    text-shadow: 0px 0px 5px #f19d36;
+    text-shadow: 0px 0px 15px #f19d36;
     transform: scale(0.95);
 }
 .blue {
