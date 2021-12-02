@@ -1,6 +1,7 @@
-//Array für Soundfiles & Beat//
+//Array für Soundfiles & Beat & Randomplaylist//
 var Sounds = ["assets/hihat.mp3", "assets/kick.mp3", "assets/snare.mp3", "assets/F.mp3", "assets/G.mp3", "assets/A.mp3", "assets/C.mp3", "assets/laugh-1.mp3", "assets/laugh-2.mp3", "assets/leer.mp3"];
 var Beat = [Sounds[1], Sounds[1], Sounds[1], Sounds[2], Sounds[1], Sounds[1], Sounds[0], Sounds[2]];
+var Random = [Sounds[0], Sounds[1], Sounds[2], Sounds[7], Sounds[8]];
 //Booleans für Funktionen//
 var beatPlaying = false;
 var beatRecording = false;
@@ -39,7 +40,7 @@ function stopBeat() {
 function randomBeat() {
     stopBeat();
     stopRecording();
-    Beat = [Sounds[Math.floor(Math.random() * 3)], Sounds[Math.floor(Math.random() * 3)], Sounds[Math.floor(Math.random() * 3)], Sounds[Math.floor(Math.random() * 3)], Sounds[Math.floor(Math.random() * 3)], Sounds[Math.floor(Math.random() * 3)], Sounds[Math.floor(Math.random() * 3)], Sounds[Math.floor(Math.random() * 3)],];
+    Beat = [Random[Math.floor(Math.random() * 5)], Random[Math.floor(Math.random() * 5)], Random[Math.floor(Math.random() * 5)], Random[Math.floor(Math.random() * 5)], Random[Math.floor(Math.random() * 5)], Random[Math.floor(Math.random() * 5)], Random[Math.floor(Math.random() * 5)], Random[Math.floor(Math.random() * 5)]];
 }
 //Funktion um den Beat zu löschen bzw. einen leeren Beat laufen zu lassen// 
 function deleteBeat() {
