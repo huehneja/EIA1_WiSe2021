@@ -73,10 +73,11 @@ i {
 }
 #record {
     color: #d42121;
+    text-shadow: 0px 0px 5px #f53d3d;
 }
 #record:hover {
     color: #f53d3d;
-    text-shadow: 0px 0px 1px #d42121;
+    text-shadow: 0px 0px 5px #d42121;
     transform: scale(1.03);
 }
 #record:active {
@@ -86,6 +87,7 @@ i {
 }
 .fa-play-circle {
     color: #21d42a;    
+    text-shadow: 0px 0px 5px #3df546;
 }
 .fa-play-circle:hover {
     color: #3df546;
@@ -99,6 +101,7 @@ i {
 }
 .fa-stop-circle {
     color: #f00b82;
+    text-shadow: 0px 0px 5px #fd54ab;
 }
 .fa-stop-circle:hover {
     color: #fd54ab;
@@ -112,6 +115,7 @@ i {
 }
 #delete {
     color: #2167d4;
+    text-shadow: 0px 0px 5px #3d94f5;
 }
 #delete:hover {
     color: #3d94f5;
@@ -125,6 +129,7 @@ i {
 }
 #random {
     color: #c96a05;
+    text-shadow: 0px 0px 5px #f19d36;
 }
 #random:hover {
     color: #f19d36;
