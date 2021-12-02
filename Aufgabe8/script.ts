@@ -16,7 +16,6 @@ function playSample (audioFile) {
 }
 //Funktion für den Playbutton//
 function playBeat (){
-    stopRecording();
     beatPlaying = true;
     document.getElementById("play").setAttribute("class","far fa-stop-circle")
     var index1 : number = 0;
@@ -69,7 +68,7 @@ window.addEventListener("load", function() {
     document.getElementById("C").addEventListener("click", function () {playSample(Sounds[6])})
     document.getElementById("laugh-1").addEventListener("click", function () {playSample(Sounds[7])})
     document.getElementById("laugh-2").addEventListener("click", function () {playSample(Sounds[8])})
-    document.getElementById("play").addEventListener("click", function () {if(!beatPlaying&&Beat[1]!=undefined) {playBeat()} else {stopBeat();}}) // Verhindert das bei leerem Beat ein Error ausgegeben wird//
+    document.getElementById("play").addEventListener("click", function () {stopRecording(); if(!beatPlaying&&Beat[1]!=undefined) {playBeat()} else {stopBeat();}}) // Verhindert das bei leerem Beat ein Error ausgegeben wird//
     document.getElementById("random").addEventListener("click", function(){randomBeat();})
     document.getElementById("delete").addEventListener("click", function(){deleteBeat();})
     document.getElementById("record").addEventListener("click", function(){if(!beatRecording) {recordBeat()} else { stopRecording();}})
