@@ -25,8 +25,8 @@ function playBeat (){
     }
 
 //Funktion für Stop (wird mehrfach benutzt um bei anderen Befehlen nicht zu überlappen)//
-function stopBeat() {
-    {document.getElementById("play").setAttribute("class","far fa-play-circle"); beatPlaying=false;}
+function stopBeat()    {
+    document.getElementById("play").setAttribute("class","far fa-play-circle"); beatPlaying=false;
 }
 
 //Funktion um einen zufälligen Beat mit 8 Sounds zu erstellen//
