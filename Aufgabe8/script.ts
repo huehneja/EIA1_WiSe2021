@@ -76,14 +76,14 @@ window.addEventListener("load", function(): void {
     document.getElementById("delete").addEventListener("click", function(): void {deleteBeat(); });
     document.getElementById("record").addEventListener("click", function(): void {if (!beatRecording) {recordBeat(); } else { stopRecording(); }});
     //Tastatur Steuerung//
-    document.addEventListener("keydown", (event) => { if (event.key == "1") { playSample(sounds[0]); } });
-    document.addEventListener("keydown", (event) => {if (event.key == "2") {playSample (sounds[1]); }}); 
-    document.addEventListener("keydown", (event) => {if (event.key == "3") {playSample (sounds[2]); }});
+    document.addEventListener("keydown", (event) => { if (event.key == "7") { playSample(sounds[0]); } });
+    document.addEventListener("keydown", (event) => {if (event.key == "8") {playSample (sounds[1]); }}); 
+    document.addEventListener("keydown", (event) => {if (event.key == "9") {playSample (sounds[2]); }});
     document.addEventListener("keydown", (event) => {if (event.key == "4") {playSample (sounds[3]); }});
     document.addEventListener("keydown", (event) => {if (event.key == "5") {playSample (sounds[4]); }});
     document.addEventListener("keydown", (event) => {if (event.key == "6") {playSample (sounds[5]); }});
-    document.addEventListener("keydown", (event) => {if (event.key == "7") {playSample (sounds[6]); }});
-    document.addEventListener("keydown", (event) => {if (event.key == "8") {playSample (sounds[7]); }});
-    document.addEventListener("keydown", (event) => {if (event.key == "9") {playSample (sounds[8]); }});
+    document.addEventListener("keydown", (event) => {if (event.key == "1") {playSample (sounds[6]); }});
+    document.addEventListener("keydown", (event) => {if (event.key == "2") {playSample (sounds[7]); }});
+    document.addEventListener("keydown", (event) => {if (event.key == "3") {playSample (sounds[8]); }});
     document.addEventListener("keydown", (event) => {if (event.key == "0") {if (!beatPlaying && beat[1] != undefined) {playBeat(); } else {stopBeat(); }}}); //Siehe Zeile 70//
 });
