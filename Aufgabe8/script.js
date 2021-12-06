@@ -60,7 +60,7 @@ function recordBeat() {
         clearInterval(interval);
     }
     else {
-        document.getElementById("record").setAttribute("style", "color: #d42121;");
+        document.getElementById("record").setAttribute("style", "color: #f53d3d;");
     } }
     function playInterval2() { if (beatRecording == false) {
         clearInterval(interval2);
@@ -72,7 +72,7 @@ function recordBeat() {
 //Funktion um das Recorden zu stoppen//
 function stopRecording() {
     beatRecording = false;
-    document.getElementById("record").setAttribute("style", "color: #d42121;");
+    document.getElementById("record").setAttribute("style", "color: #f53d3d;");
 }
 //EventListener für die zentrale Funktion & keydown Events für Tastatursteuerung//
 window.addEventListener("load", function () {
