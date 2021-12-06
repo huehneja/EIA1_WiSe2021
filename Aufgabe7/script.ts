@@ -3,6 +3,7 @@ function playSample (audioFile) {
     var sound:HTMLAudioElement = new Audio(audioFile);
     sound.play();
 }
+var Song : string [] = [Sounds[5], Sounds[4], Sounds [3], Sounds[4], Sounds[5],  Sounds[5], Sounds[5], Sounds[2], Sounds[4], Sounds[4], Sounds[4], Sounds[2], Sounds[5], Sounds[6], Sounds[6], Sounds[2], Sounds[5], Sounds[4], Sounds [3], Sounds[4], Sounds[5], Sounds[5], Sounds[5], Sounds[2], Sounds[4], Sounds[4], Sounds[5], Sounds[4], Sounds [3],Sounds[7] , Sounds[8], Sounds[2], Sounds[2], Sounds[2], Sounds[0], Sounds[1], Sounds [0], Sounds[2], Sounds[0], Sounds[1], Sounds [0], Sounds[2], Sounds[0], Sounds[1], Sounds [0], Sounds[2], Sounds[0], Sounds[1], Sounds [0], Sounds[2], Sounds[0], Sounds[1], Sounds [0], Sounds[2]] //Vielen Dank für die Hilfe bei den ,,//
 
 //Funktion für den Beat//
 function playBeat (){

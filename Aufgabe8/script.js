@@ -2,6 +2,7 @@
 var sounds = ["assets/hihat.mp3", "assets/kick.mp3", "assets/snare.mp3", "assets/F.mp3", "assets/G.mp3", "assets/A.mp3", "assets/C.mp3", "assets/laugh-1.mp3", "assets/laugh-2.mp3", "assets/leer.mp3"];
 var beat = [sounds[1], sounds[1], sounds[1], sounds[2], sounds[1], sounds[1], sounds[0], sounds[2]];
 var random = [sounds[0], sounds[1], sounds[2], sounds[7], sounds[8]];
+var song = [sounds[5], sounds[4], sounds[3], sounds[4], sounds[5], sounds[5], sounds[5], sounds[2], sounds[4], sounds[4], sounds[4], sounds[2], sounds[5], sounds[6], sounds[6], sounds[2], sounds[5], sounds[4], sounds[3], sounds[4], sounds[5], sounds[5], sounds[5], sounds[2], sounds[4], sounds[4], sounds[5], sounds[4], sounds[3], sounds[7], sounds[8], sounds[2], sounds[2], sounds[2], sounds[0], sounds[1], sounds[0], sounds[2], sounds[0], sounds[1], sounds[0], sounds[2], sounds[0], sounds[1], sounds[0], sounds[2], sounds[0], sounds[1], sounds[0], sounds[2], sounds[0], sounds[1], sounds[0], sounds[2], sounds[0], sounds[1], sounds[0], sounds[2], sounds[0], sounds[1], sounds[0], sounds[2], sounds[0], sounds[1], sounds[0], sounds[2], sounds[0], sounds[1], sounds[0], sounds[2], sounds[0], sounds[1], sounds[0], sounds[2], sounds[0], sounds[1], sounds[0], sounds[2], sounds[0], sounds[1], sounds[0], sounds[2], sounds[0], sounds[1], sounds[0], sounds[2], sounds[0], sounds[1], sounds[0], sounds[2], sounds[0], sounds[1], sounds[0], sounds[2], sounds[0], sounds[1], sounds[0], sounds[2], sounds[0], sounds[1], sounds[0], sounds[2], sounds[0], sounds[1], sounds[0], sounds[2], sounds[0], sounds[1], sounds[0]]; //Who will ever gonna find this??//
 //Booleans für Funktionen//
 var beatPlaying = false;
 var beatRecording = false;
@@ -21,6 +22,9 @@ function playBeat() {
     var interval = setInterval(playInterval, 250);
     function playInterval() { if (!beatPlaying) {
         clearInterval(interval);
+    }
+    else if (index1 == 64) {
+        beat = song;
     }
     else if (index1 >= beat.length) {
         index1 = 0;
