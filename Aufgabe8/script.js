@@ -60,7 +60,7 @@ function recordBeat() {
         clearInterval(interval);
     }
     else {
-        document.getElementById("record").setAttribute("style", "color: #f53d3d;");
+        document.getElementById("record").setAttribute("style", "color: #d42121;");
     } }
     function playInterval2() { if (beatRecording == false) {
         clearInterval(interval2);

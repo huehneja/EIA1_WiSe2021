@@ -51,7 +51,7 @@ function recordBeat(): void {
     //Blinkende Aufnahme//
     var interval: any = setInterval(playInterval, 500);
     var interval2: any = setInterval (playInterval2, 1000);
-    function playInterval(): void {if (beatRecording == false) {clearInterval(interval); } else {document.getElementById("record").setAttribute("style", "color: #f53d3d;"); }}
+    function playInterval(): void {if (beatRecording == false) {clearInterval(interval); } else {document.getElementById("record").setAttribute("style", "color: #d42121;"); }}
     function playInterval2(): void {if (beatRecording == false) {clearInterval(interval2); } else {document.getElementById("record").setAttribute("style", "color: #000000;"); }}
 
 }
