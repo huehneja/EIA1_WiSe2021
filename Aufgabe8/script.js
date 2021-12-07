@@ -25,6 +25,7 @@ function playBeat() {
     }
     else if (index1 == 64) {
         beat = song;
+        index1 = 0;
     }
     else if (index1 >= beat.length) {
         index1 = 0;
@@ -132,6 +133,7 @@ window.addEventListener("load", function () {
         playSample(sounds[8]);
     } });
     document.addEventListener("keydown", function (event) { if (event.key == "0") {
+        stopRecording();
         if (!beatPlaying && beat[1] != undefined) {
             playBeat();
         }

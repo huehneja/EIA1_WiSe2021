@@ -21,7 +21,7 @@ function playBeat (): void {
     document.getElementById("play").setAttribute("class", "far fa-stop-circle");
     var index1: number = 0;
     var interval: any = setInterval(playInterval, 250);
-    function playInterval(): void {if (!beatPlaying) { clearInterval(interval); } else if (index1 == 64) {beat = song ; } else  if (index1 >= beat.length) { index1 = 0 ; playSample([beat[index1]]); } else {playSample([beat[index1]]); } index1++; }
+    function playInterval(): void {if (!beatPlaying) { clearInterval(interval); } else if (index1 == 64) {beat = song ; index1 = 0 ; } else  if (index1 >= beat.length) { index1 = 0 ; playSample([beat[index1]]); } else {playSample([beat[index1]]); } index1++; }
     console.log(beat);
     }
 
@@ -85,5 +85,5 @@ window.addEventListener("load", function(): void {
     document.addEventListener("keydown", (event) => {if (event.key == "1") {playSample (sounds[6]); }});
     document.addEventListener("keydown", (event) => {if (event.key == "2") {playSample (sounds[7]); }});
     document.addEventListener("keydown", (event) => {if (event.key == "3") {playSample (sounds[8]); }});
-    document.addEventListener("keydown", (event) => {if (event.key == "0") {if (!beatPlaying && beat[1] != undefined) {playBeat(); } else {stopBeat(); }}}); //Siehe Zeile 70//
+    document.addEventListener("keydown", (event) => {if (event.key == "0") {stopRecording(); if (!beatPlaying && beat[1] != undefined) {playBeat(); } else {stopBeat(); }}}); //Siehe Zeile 70//
 });
