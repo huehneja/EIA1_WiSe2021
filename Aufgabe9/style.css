@@ -16,10 +16,10 @@ h1 {
     font-size: xx-large;
 }
 h2 {
-    color: #999999;
+    color: #909090;
 }
 b {
-    color: #a3a3a3;
+    color: #999999;
 }
 input[type=text] {
     width: 100%;
@@ -41,20 +41,20 @@ ul {
   }
 li {
     background-color: #303030;
-    padding: 20px 10px;
+    padding: 0px 10px;
     display: inline-flex;
     margin: 1px 10px;
     width: 100%;
     overflow: hidden;
-    box-shadow: -2px 2px 5px #0d0c0c;;
+    box-shadow: -2px 2px 5px #0d0c0c;
     transition: all 210ms;
+    text-shadow: -2px 2px 5px #0d0c0c;
 }
 li p{
     margin: auto 20px;
     color: white;
-    font-size: 35px;
+    font-size: 28px;
     word-break: break-all;
-    text-shadow: 0px 0px 4px #0d0c0c;
 }
 li i{
     padding: 16px 0;
@@ -62,8 +62,11 @@ li i{
     font-size: 25px;
     cursor: pointer;
 }
-li .far:hover, li .fas:hover {
-    opacity: 50%;
+li .far:hover {
+    color: #3df546;
+}
+li .fas:hover {
+    color: #d42121;
 }
 a {
     color: #303030;
@@ -77,6 +80,6 @@ li:hover > i:last-child {
     visibility: visible;
   }
 li:hover {
-    background-color: #444444;
+    background-color: #404040;
     transform: scale(1.005);
 }

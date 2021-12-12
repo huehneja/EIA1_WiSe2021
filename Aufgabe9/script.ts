@@ -23,8 +23,8 @@ function createTask(): void {
     newTask.appendChild(createText);
     createText.innerHTML = input;
     newTask.appendChild(createDelIcon);
-    createDelIcon.classList.add("far", "fa-trash-alt");
+    createDelIcon.classList.add("fas", "fa-trash-alt");
     //Funktionen für die Icons//
-    createCheckIcon.addEventListener("click", function(): void {if (!checkedTask) {createCheckIcon.setAttribute("class", "far fa-check-circle"); checkedTask = true; } else {createCheckIcon.setAttribute("class", "far fa-circle"); checkedTask = false; }});
+    createCheckIcon.addEventListener("click", function(): void {if (!checkedTask) {createCheckIcon.setAttribute("class", "far fa-check-circle"); checkedTask = true; createCheckIcon.setAttribute("style", "color: #21d42a"); } else {createCheckIcon.setAttribute("class", "far fa-circle"); checkedTask = false; createCheckIcon.setAttribute("style", "color: white"); }});
     createDelIcon.addEventListener("click", function(): void { tasklist.removeChild (newTask); counter--; document.getElementById("amount").innerHTML = "" + counter; });
 }
