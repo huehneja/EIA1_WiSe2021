@@ -1,7 +1,13 @@
 //Tastatursteuerung für Taskeingabe//
 window.addEventListener("load", function () {
     document.querySelector("input").addEventListener("keydown", function (event) { if (event.keyCode === 13) {
-        createTask();
+        if (document.querySelector("input").value != "") {
+            createTask();
+            document.querySelector("input").value = "";
+        }
+        else {
+            alert("Error 420: Input must not be empty!");
+        }
     } });
 });
 //Taskcounter//

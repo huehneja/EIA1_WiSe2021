@@ -37,7 +37,7 @@ input[type=text] {
 ul {
     position: relative;
     list-style-type: none;   
-    padding: 0px; 
+    padding: 0px;
   }
 li {
     background-color: #303030;
@@ -46,12 +46,15 @@ li {
     margin: 1px 10px;
     width: 100%;
     overflow: hidden;
+    box-shadow: -2px 2px 5px #0d0c0c;;
+    transition: all 210ms;
 }
 li p{
     margin: auto 20px;
     color: white;
     font-size: 35px;
     word-break: break-all;
+    text-shadow: 0px 0px 4px #0d0c0c;
 }
 li i{
     padding: 16px 0;
@@ -68,11 +71,12 @@ a {
 li i:last-child {
     visibility: hidden;
     position: fixed;
-    left: 97%;
+    right: 10px;
 }
 li:hover > i:last-child {
     visibility: visible;
   }
 li:hover {
-    filter: brightness(110%);
+    background-color: #444444;
+    transform: scale(1.005);
 }
