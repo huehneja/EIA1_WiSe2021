@@ -23,12 +23,17 @@ function createTask(): void {
     var hours: any = currentTime.getHours();
     var minutes: any = currentTime.getMinutes();
     var stampCheck: any = document.getElementById("timestamp");
+    var rbCheck: any = document.getElementById("regenbogen");
     if (minutes < 10) {
             minutes = "0" + minutes;
         }
     str += hours + ":" + minutes + " ";
     tasklist.appendChild(newTask);
-    newTask.style.background = color;
+    if (rbCheck.checked == true) {
+        newTask.style.backgroundImage = "url('../Aufgabe4/Assets/bg.gif')";
+    } else {
+        newTask.style.background = color;
+    }
     newTask.appendChild(createCheckIcon);
     createCheckIcon.classList.add("far", "fa-circle");
     createCheckIcon.setAttribute("id", "check");

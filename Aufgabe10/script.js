@@ -31,12 +31,18 @@ function createTask() {
     var hours = currentTime.getHours();
     var minutes = currentTime.getMinutes();
     var stampCheck = document.getElementById("timestamp");
+    var rbCheck = document.getElementById("regenbogen");
     if (minutes < 10) {
         minutes = "0" + minutes;
     }
     str += hours + ":" + minutes + " ";
     tasklist.appendChild(newTask);
-    newTask.style.background = color;
+    if (rbCheck.checked == true) {
+        newTask.style.backgroundImage = "url('../Aufgabe4/Assets/bg.gif')";
+    }
+    else {
+        newTask.style.background = color;
+    }
     newTask.appendChild(createCheckIcon);
     createCheckIcon.classList.add("far", "fa-circle");
     createCheckIcon.setAttribute("id", "check");
