@@ -1,24 +1,14 @@
 body {
-    background: #f0f0f0;
+    background-color: #eeeeee;
     font-family: sans-serif;
     width: 50%;
     margin: auto;
-}
-
-h1 {
-    margin-top: 25px;
-    text-align: center;
-    color: #303030;
-    text-shadow: 0px 0px 2px #0d0c0c;
-}
-h1 {
-    font-size: xx-large;
 }
 h2 {
     color: #303030;
     text-align: center;
     font-size: small;
-    margin-bottom: 0;
+    margin-top: -12px;
 }
 b {
     color: #999999;
@@ -31,7 +21,7 @@ input[type=text] {
     padding: 12px 16px;
     margin: auto;
     border-width: 2px;
-    border-radius: 10px;
+    border-radius: 2em 2em 0 0;
     border-style: solid;
     font-weight: 700;
     color: #0d0c0c;
@@ -40,6 +30,7 @@ input[type=text] {
     box-shadow: 0px 0px 2px #0d0c0c;
   }
 ul {
+    margin-top: 75px;
     position: relative;
     list-style-type: none;   
     padding: 0px;
@@ -90,8 +81,33 @@ li:hover {
 label {
     font-size: small;
 }
-.color {
+#color, #color + label {
     float: right;
+}
+#color {
+    margin-top: -32px;
+    box-shadow: 0px 0px 2px #404040;
+
+}
+#color + label {
+    margin-top: -27px;
+    margin-right: 2px;
+}
+#inputfooter {
+    display: block;
+    background-color: #dddddd;
+    padding: 2px 16px;
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    top: 54px;
+    transform: translate(-50%);
+    margin-left: 18px;
+    border-radius: 0 0 2em 2em;
+    box-shadow: -2px 2px 5px #0d0c0c;
+}
+#inputfooter input, #inputfooter label {
+    position: relative;
 }
 .rainbow-text {
     animation-duration: 3.115s;
@@ -107,4 +123,6 @@ label {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
    }
- 
+#taskmaster {
+    top: 10px;
+}

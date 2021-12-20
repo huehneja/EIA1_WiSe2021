@@ -32,11 +32,13 @@ function createTask() {
     var minutes = currentTime.getMinutes();
     var stampCheck = document.getElementById("timestamp");
     var rbCheck = document.getElementById("regenbogen");
+    //Timestamp//
     if (minutes < 10) {
         minutes = "0" + minutes;
     }
     str += hours + ":" + minutes + " ";
     tasklist.appendChild(newTask);
+    //Regenbogen//
     if (rbCheck.checked == true) {
         newTask.style.backgroundImage = "url('../Aufgabe4/Assets/bg.gif')";
     }

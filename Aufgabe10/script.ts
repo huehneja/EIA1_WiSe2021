@@ -24,11 +24,13 @@ function createTask(): void {
     var minutes: any = currentTime.getMinutes();
     var stampCheck: any = document.getElementById("timestamp");
     var rbCheck: any = document.getElementById("regenbogen");
+    //Timestamp//
     if (minutes < 10) {
             minutes = "0" + minutes;
         }
     str += hours + ":" + minutes + " ";
     tasklist.appendChild(newTask);
+    //Regenbogen//
     if (rbCheck.checked == true) {
         newTask.style.backgroundImage = "url('../Aufgabe4/Assets/bg.gif')";
     } else {
