@@ -108,11 +108,7 @@ label {
 }
 #inputfooter input, #inputfooter label {
     position: relative;
-}
-.rainbow-text {
-    animation-duration: 3.115s;
-   }
-   
+} 
 .rainbow-text {
     background: url(../Aufgabe4/Assets/bg.gif);
     background-size: auto;
