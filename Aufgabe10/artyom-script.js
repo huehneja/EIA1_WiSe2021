@@ -4,6 +4,7 @@ window.addEventListener("load", function () {
         indexes: ["erstelle Aufgabe *"],
         smart: true,
         action: function (i, wildcard) {
+            //Abgespeckte Kopie von meinem Hauptscript ohne Regenbogen, Color und Timestamp//
             counter++;
             var checkedTask = false;
             var input = wildcard;

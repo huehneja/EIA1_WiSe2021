@@ -15,9 +15,17 @@ window.addEventListener("load", function () {
 var counter = 0;
 var donecount = 0;
 var leftcount = 0;
+//Update Counter//
+function updateCounter() {
+    leftcount = counter - donecount;
+    document.getElementById("done").innerHTML = "" + donecount;
+    document.getElementById("left").innerHTML = "" + leftcount;
+    document.getElementById("amount").innerHTML = "" + counter;
+}
 //Erstellt die Task//
 function createTask() {
     counter++;
+    //Variablen für DOM Manipulation und Styles + Logik für Funktionen//
     var checkedTask = false;
     var input = document.getElementById("taskmaster").value;
     var tasklist = document.getElementById("tasklist");
@@ -32,11 +40,6 @@ function createTask() {
     var minutes = currentTime.getMinutes();
     var stampCheck = document.getElementById("timestamp");
     var rbCheck = document.getElementById("regenbogen");
-    //Timestamp//
-    if (minutes < 10) {
-        minutes = "0" + minutes;
-    }
-    str += hours + ":" + minutes + " ";
     tasklist.appendChild(newTask);
     //Regenbogen//
     if (rbCheck.checked == true) {
@@ -45,18 +48,26 @@ function createTask() {
     else {
         newTask.style.background = color;
     }
+    //Checkicon//
     newTask.appendChild(createCheckIcon);
     createCheckIcon.classList.add("far", "fa-circle");
     createCheckIcon.setAttribute("id", "check");
+    //Timestamp + Input//
     newTask.appendChild(createText);
+    if (minutes < 10) {
+        minutes = "0" + minutes;
+    }
+    str += hours + ":" + minutes + " ";
     if (stampCheck.checked == true) {
         createText.innerHTML = str + " - " + input;
     }
     else {
         createText.innerHTML = input;
     }
+    //Deleteicon//
     newTask.appendChild(createDelIcon);
     createDelIcon.classList.add("fas", "fa-trash-alt");
+    //Funktion Counter + Icons//
     createCheckIcon.addEventListener("click", function () { if (!checkedTask) {
         createCheckIcon.setAttribute("class", "far fa-check-circle");
         checkedTask = true;
@@ -73,10 +84,4 @@ function createTask() {
     else {
         donecount--;
     } document.getElementById("amount").innerHTML = "" + counter; updateCounter(); });
-}
-function updateCounter() {
-    leftcount = counter - donecount;
-    document.getElementById("done").innerHTML = "" + donecount;
-    document.getElementById("left").innerHTML = "" + leftcount;
-    document.getElementById("amount").innerHTML = "" + counter;
 }
