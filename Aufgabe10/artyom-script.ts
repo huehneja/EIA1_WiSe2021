@@ -18,6 +18,7 @@ window.addEventListener("load", function(): void {
                 var createDelIcon: any = document.createElement("i");
                 tasklist.appendChild(newTask);
                 newTask.appendChild(createCheckIcon);
+                newTask.style.backgroundColor = "#303030";
                 createCheckIcon.classList.add("far", "fa-circle");
                 createCheckIcon.setAttribute("id", "check");
                 newTask.appendChild(createText);
