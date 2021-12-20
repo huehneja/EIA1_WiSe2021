@@ -49,7 +49,6 @@ function createTask(): void {
     //Checkicon//
     newTask.appendChild(createCheckIcon);
     createCheckIcon.classList.add("far", "fa-circle");
-    createCheckIcon.setAttribute("id", "check");
 
     //Timestamp + Input//
     newTask.appendChild(createText);
