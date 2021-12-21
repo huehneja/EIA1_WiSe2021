@@ -4,12 +4,6 @@ body {
     width: 50%;
     margin: auto;
 }
-h2 {
-    color: #303030;
-    text-align: center;
-    font-size: small;
-    margin-top: -12px;
-}
 b {
     color: #999999;
 }
@@ -27,16 +21,17 @@ input[type=text] {
     font-weight: 700;
     color: #0d0c0c;
     font-size: 14px;
-    position: fixed;
+    position: absolute;
     box-shadow: 0px 0px 2px #0d0c0c;
+    min-width: 800px;
   }
-ul {
+#tasklist {
     margin-top: 125px;
     position: relative;
     list-style-type: none;   
     padding: 0px;
   }
-li {
+.listitem {
     padding: 0px 10px;
     display: inline-flex;
     margin: 1px 10px;
@@ -45,31 +40,32 @@ li {
     box-shadow: -2px 2px 5px #0d0c0c;
     transition: all 210ms;
     text-shadow: -2px 2px 5px #0d0c0c;
+    min-width: 800px;
 }
-li p{
+.listitem p{
     margin: auto 20px;
     color: white;
     font-size: 28px;
     word-break: break-all;
 }
-li i{
+.listitem i{
     padding: 16px 0;
     color: white;
     font-size: 25px;
     cursor: pointer;
 }
-li .fas:hover {
+.listitem .fas:hover {
     color: #d42121;
 }
-li i:last-child {
+.listitem i:last-child {
     visibility: hidden;
     position: fixed;
     right: 10px;
 }
-li:hover > i:last-child {
+.listitem:hover > i:last-child {
     visibility: visible;
   }
-li:hover {
+.listitem:hover {
     background-color: #404040;
     transform: scale(1.005);
 }
@@ -79,38 +75,32 @@ li:hover {
 .fa-check-circle {
     color: #21d42a;
 }
-label {
-    font-size: small;
-}
-#color, #color + label {
-    float: right;
-}
-#color {
-    margin-top: -32px;
-    box-shadow: 0px 0px 2px #404040;
-
-}
-#color + label {
-    margin-top: -27px;
-    margin-right: 2px;
-}
 #inputfooter {
     display: block;
+    margin: auto;
     background-color: #dddddd;
     padding: 2px 16px;
     width: 50%;
-    position: fixed;
+    position: absolute;
     z-index: 2;
-    left: 50%;
     top: 54px;
-    transform: translate(-50%);
-    margin-left: 18px;
     border-radius: 0 0 2em 2em;
     box-shadow: -2px 2px 5px #0d0c0c;
+    min-width: 800px;
 }
-#inputfooter input, #inputfooter label {
-    position: relative;
-} 
+#footerlist {
+    list-style-type: none;
+    display: inline-flex;
+    margin: 5px 0px 0px 0px;
+    padding-left: 100px;
+}
+#footerlist p {
+    margin: 1px;
+}
+#footerlist li {
+    display: flex;
+    margin-right: 100px;
+}
 .rainbow-text {
     background: url(../Aufgabe4/Assets/bg.gif);
     background-size: auto;

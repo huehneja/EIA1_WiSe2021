@@ -41,6 +41,7 @@ function createTask() {
     var stampCheck = document.getElementById("timestamp");
     var rbCheck = document.getElementById("regenbogen");
     tasklist.appendChild(newTask);
+    newTask.setAttribute("class", "listitem");
     //Regenbogen//
     if (rbCheck.checked == true) {
         newTask.style.backgroundImage = "url('../Aufgabe4/Assets/bg.gif')";
