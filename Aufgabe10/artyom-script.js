@@ -5,39 +5,8 @@ window.addEventListener("load", function () {
         smart: true,
         action: function (i, wildcard) {
             //Abgespeckte Kopie von meinem Hauptscript ohne Regenbogen, Color und Timestamp//
-            counter++;
-            var checkedTask = false;
             var input = wildcard;
-            var tasklist = document.getElementById("tasklist");
-            var newTask = document.createElement("li");
-            var createCheckIcon = document.createElement("i");
-            var createText = document.createElement("p");
-            var createDelIcon = document.createElement("i");
-            tasklist.appendChild(newTask);
-            newTask.appendChild(createCheckIcon);
-            newTask.style.backgroundColor = "#303030";
-            createCheckIcon.classList.add("far", "fa-circle");
-            createCheckIcon.setAttribute("id", "check");
-            newTask.appendChild(createText);
-            createText.innerHTML = input;
-            newTask.appendChild(createDelIcon);
-            createDelIcon.classList.add("fas", "fa-trash-alt");
-            createCheckIcon.addEventListener("click", function () { if (!checkedTask) {
-                createCheckIcon.setAttribute("class", "far fa-check-circle");
-                checkedTask = true;
-                donecount++;
-            }
-            else {
-                createCheckIcon.setAttribute("class", "far fa-circle");
-                checkedTask = false;
-                donecount--;
-            } updateCounter(); });
-            createDelIcon.addEventListener("click", function () { tasklist.removeChild(newTask); counter--; if (!checkedTask) {
-                leftcount--;
-            }
-            else {
-                donecount--;
-            } document.getElementById("amount").innerHTML = "" + counter; updateCounter(); });
+            createTask();
         }
     });
     function startContinuousArtyom() {

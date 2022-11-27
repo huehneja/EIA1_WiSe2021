@@ -22,12 +22,12 @@ function updateCounter() {
     document.getElementById("left").innerHTML = "" + leftcount;
     document.getElementById("amount").innerHTML = "" + counter;
 }
+var input = document.getElementById("taskmaster").value;
 //Erstellt die Task//
 function createTask() {
     counter++;
     //Variablen für DOM Manipulation und Styles + Logik für Funktionen//
     var checkedTask = false;
-    var input = document.getElementById("taskmaster").value;
     var tasklist = document.getElementById("tasklist");
     var newTask = document.createElement("li");
     var color = document.getElementById("color").value;
