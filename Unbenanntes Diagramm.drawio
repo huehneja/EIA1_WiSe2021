@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-12-08T13:27:16.542Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36 OPR/104.0.0.0" etag="yU7CVlujwFdv3hJmehi8" version="22.1.7" type="github">
+<mxfile host="app.diagrams.net" modified="2023-12-08T13:31:11.671Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36 OPR/104.0.0.0" etag="1u5Fh3_gnaafLtn4MM94" version="22.1.7" type="github">
   <diagram id="prtHgNgQTEPvFCAcTncT" name="Page-1">
-    <mxGraphModel dx="2466" dy="901" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3149" dy="1277" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -116,7 +116,7 @@
         <mxCell id="dNwmKPcMfGst-BSoK7ff-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dNwmKPcMfGst-BSoK7ff-15" target="dNwmKPcMfGst-BSoK7ff-17">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="dNwmKPcMfGst-BSoK7ff-15" value="Medien und Gewalt" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+        <mxCell id="dNwmKPcMfGst-BSoK7ff-15" value="Hassrede in Medien" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
           <mxGeometry x="168" y="200" width="150" height="60" as="geometry" />
         </mxCell>
         <mxCell id="dNwmKPcMfGst-BSoK7ff-16" value="Theorien und Faktoren" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
@@ -137,7 +137,7 @@
         <mxCell id="dNwmKPcMfGst-BSoK7ff-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dNwmKPcMfGst-BSoK7ff-22" target="dNwmKPcMfGst-BSoK7ff-24">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="dNwmKPcMfGst-BSoK7ff-22" value="Medien und Gewalt" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+        <mxCell id="dNwmKPcMfGst-BSoK7ff-22" value="Prosoziales Verhalten in Medien" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
           <mxGeometry x="778" y="200" width="150" height="60" as="geometry" />
         </mxCell>
         <mxCell id="dNwmKPcMfGst-BSoK7ff-23" value="Thesen und Theorien" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
